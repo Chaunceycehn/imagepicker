@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="//at.alicdn.com/t/font_728888_c0bw34pb6mr.js"></script>
+  <link rel="stylesheet" href=".//style.css">
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script src=".//main.js"></script>
+  <style type="text/css">
+    .icon {
+      height: 25px;
+      width: 25px;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+      position: absolute;
+      right: 15px;
+      top: 0;
+      height: 100%;
+    }
+  </style>
+
+</head>
+
+<body>
+<div class="picker">
+    <div class="imagePicker">
+          <img src="https://pic.qqtn.com/up/2017-11/15106514268869200.jpg" alt="">
+    <input id="imageinput" type="file">
+     <div class="mask">编辑</div>
+    </div>
+</div>
+
+
+  <div class="inputwraper">
+    <span class="bd-input">
+    <span class="inputwrapper">
+        <input id=keyword type="text" autocomplete='off'>
+        <svg class="icon" aria-hidden="true"><use xlink:href="#icon-aui-icon-camera"></use></svg>
+    </span>
+    <ul id=suggertion class="suggertion">
+      <li>选项1</li>
+      <li>选项2</li>
+      <li>选项3</li>
+      <li>选项4</li>
+    </ul>
+    </span>
+    <div id=b class='baidu' onselectstart="return false;">百度一下<span class='circle'>
+  </span>
+    </div>
+
+  </div>
+
+
+
+</body>
+
+</html>
