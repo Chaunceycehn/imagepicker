@@ -5,7 +5,7 @@
   <script src="//at.alicdn.com/t/font_728888_c0bw34pb6mr.js"></script>
   <link rel="stylesheet" href=".//style.css">
   <meta charset="utf-8">
-  <title>JS Bin</title>
+  <title>我的主页</title>
   <script src=".//main.js"></script>
   <style type="text/css">
     .icon {
@@ -46,12 +46,44 @@
       <li>选项4</li>
     </ul>
     </span>
-    <div id=b class='baidu' onselectstart="return false;">百度一下<span class='circle'>
+    <div id = b class='baidu' onselectstart="return false;">百度一下<span class='circle'>
   </span>
     </div>
 
   </div>
+<script>
+b.onclick = function(){
+    console.log('hi')
+    b.querySelector('.circle')
+    .classList.add('active')
+  }
+  b.querySelector('.circle').addEventListener('transitionend',function(){
+    b.querySelector('.circle').classList.remove('active')
+  })
+  
+  
+  keyword.oninput = function(e){
+    var value = keyword.value
+    if(value){
+      suggertion.classList.add('active')
+    }else{
+      suggertion.classList.remove('active')
+    }
+  }
+  imageinput.onchange = function(e){
+      let formDate = new FormDate()
+      formDate.append('xxx',e.target.files[0])
+      $.ajax({
+        url:'xxxx',
+        data:formDate,
+        processData:false,
+        contentType:false,
+        type:'POST'
+      })
+  
+  }
 
+</script>
 
 
 </body>
